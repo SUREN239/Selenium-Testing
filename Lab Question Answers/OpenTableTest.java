@@ -52,22 +52,24 @@ public class OpenTableTest {
 	{
 		logger.logInfo("Test case started");
 
-		WebElement location = driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[1]/div"));
-		location.click();
-		logger.logDebug("Location menu clicked");
+		// WebElement location = driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[1]/div"));
+		// location.click();
+		// logger.logDebug("Location menu clicked");
 	
-		WebElement Ilocation = driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[1]/div/nav/div/div[1]/div[1]/ul/li[6]/a"));
-		Ilocation.click();
+		// WebElement Ilocation = driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[1]/div/nav/div/div[1]/div[1]/ul/li[6]/a"));
+		// Ilocation.click();
 	
-		WebElement Mlocation = driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[1]/div/nav/div/div[1]/div[2]/ul/li[1]/a"));
-		Mlocation.click();
+		// WebElement Mlocation = driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[1]/div/nav/div/div[1]/div[2]/ul/li[1]/a"));
+		// Mlocation.click();
 	
 		WebElement city = driver.findElement(By.xpath("/html/body/div[1]/div/div/main/header/div/span/div/div/div[2]/div[1]/div/input"));
-		city.sendKeys("Bangalore" + Keys.RETURN);
-		logger.logInfo("City entered: Bangalore");
+		city.sendKeys("Bangalore");
 		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/div/div/main/header/div/span/div/div/div[2]/div[2]/button")).click();
+		logger.logInfo("City entered: Bangalore");
+		Thread.sleep(4000);
 
-		WebElement clickCui = driver.findElement(By.xpath("/html/body/div[1]/div/div/main/div/section/div[6]/div/label[4]/input"));
+		WebElement clickCui = driver.findElement(By.xpath("/html/body/div[1]/div/div/main/div/section/div[6]/div/label[4]"));
 		clickCui.click();
 		Thread.sleep(2000);
 
@@ -93,8 +95,11 @@ public class OpenTableTest {
 		WebElement time = driver.findElement(By.xpath("/html/body/div[1]/div/div/main/div/div[2]/div[2]/div/article/div/div[3]/div[2]/div/select"));
 		time.click();
 		
-		WebElement timeOption = driver.findElement(By.xpath("/html/body/div[1]/div/div/main/div/div[2]/div[2]/div/article/div/div[3]/div[2]/div/select/option[38]"));
-		timeOption.click();
+
+		WebElement signIn = driver.findElement(By.xpath("/html/body/div[1]/div/div/header/div[2]/div[2]/div[1]/button"));
+		signIn.click();
+		Thread.sleep(2000);
+
 
 
 
