@@ -37,9 +37,9 @@ public class Test_ixigo {
         WebElement roundTrip = driver.findElement(By.xpath("/html/body/main/div[2]/div[1]/div[3]/div[1]/div[1]/div/button[2]"));
         roundTrip.click();
 
-        WebElement from = driver.findElement(By.xpath("/html/body/main/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div/div"));
-        from.click();
-
+        WebElement From = driver
+                .findElement(By.xpath("/html/body/main/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/div"));
+        From.click();
         Thread.sleep(2000);
 
         WebElement fromCity = driver.findElement(By.xpath("/html/body/main/div[2]/div[1]/div[3]/div[2]/div[1]/div[1]/div[3]/div[3]/li"));
@@ -47,7 +47,7 @@ public class Test_ixigo {
 
         Thread.sleep(2000);
 
-        WebElement to = driver.findElement(By.xpath("/html/body/main/div[2]/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/div"));
+        WebElement to = driver.findElement(By.xpath("/html/body/main/div[2]/div[1]/div[3]/div[2]/div[1]/div[2]"));
         to.click();
 
         Thread.sleep(2000);
