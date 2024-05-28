@@ -21,8 +21,8 @@ public class AppTest extends Base {
     @Test
     public void testcase() throws Exception
     {
-        logger = new LoggerHandler();
-        logger.logInfo("Test started");
+        
+       
         driver = openBrowser();
         Thread.sleep(3000);
 
@@ -66,6 +66,8 @@ public class AppTest extends Base {
     WebElement India =driver.findElement(By.xpath("/html/body/form[2]/div[3]/main/div/div/div[2]/div[1]/div/div/div[1]/fieldset[3]/div[2]/div[1]/select/option[80]"));
     India.click();
 
+    Thread.sleep(2000);
+
     WebElement state =driver.findElement(By.xpath("/html/body/form[2]/div[3]/main/div/div/div[2]/div[1]/div/div/div[1]/fieldset[3]/div[2]/div[2]/select"));
     state.click();
 
@@ -94,7 +96,7 @@ public class AppTest extends Base {
     Thread.sleep(10000);
 
     
-      ss.getScreenShot(driver,"verified");
+    ss.getScreenShot(driver,"verified");
 
     rr.generateExtentReport("mayoclinic-reports");
 
