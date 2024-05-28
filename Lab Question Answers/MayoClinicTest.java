@@ -93,8 +93,6 @@ public class AppTest extends Base {
 
     Thread.sleep(10000);
 
-    WebElement popup=driver.findElement(By.xpath("/html/body/div[2]/form/div[3]/div[1]/h1"));
-    
     
       ss.getScreenShot(driver,"verified");
 
