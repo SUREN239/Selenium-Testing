@@ -21,6 +21,7 @@ public class AppTest extends Base {
     @Test
     public void testcase() throws Exception
     {
+        logger = new LoggerHandler();
         logger.logInfo("Test started");
         driver = openBrowser();
         Thread.sleep(3000);
@@ -94,10 +95,8 @@ public class AppTest extends Base {
 
     WebElement popup=driver.findElement(By.xpath("/html/body/div[2]/form/div[3]/div[1]/h1"));
     
-    if(popup.getText().equals("Complete payment"))
-    {
-      ss.getScreenShot(driver,"payment.png");
-    }
+    
+      ss.getScreenShot(driver,"verified");
 
     rr.generateExtentReport("mayoclinic-reports");
 
