@@ -20,7 +20,7 @@ public class AdBlocker {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
 
-        String remoteWebDriverUrl = "http://localhost:4444/wd/hub";
+        String remoteWebDriverUrl = "http://localhost:4444/";
         WebDriver driver = new RemoteWebDriver(new URL(remoteWebDriverUrl), capabilities);
 
         proxy.blacklistRequests("https?://.*\\.doubleclick\\.net/.*", 200);
